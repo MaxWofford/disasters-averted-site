@@ -18,11 +18,20 @@
       if(snapshot.val() === null) {
         alert("Averting Disaster"); /*Popup window*/
         ref.set({disasterCount: 1}); /*Pushes data to firebase*/
-      
+      } else {
+        var counter = snapshot.val().count;
+        alert(counter + " disaster(s) averted");
+        var updatedDisasters = counter ++;
+        ref.set({disasterCount: 'updatedDisasters'}); /*Pushes data to firebase*/
       }
     });
 
 
+    var submit = function () {
+        alert("Averting Disaster"); /*Popup window*/
+        ref.set({disasterCount: disasterAdded}); /*Pushes data to firebase*/
+        return false;
+    }
 
 
     </script>
