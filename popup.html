@@ -4,36 +4,10 @@
     <meta charset="utf-8">
     <title>Disasters Avoided</title>
     <!--Resources-->
-    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
 </head>
 <body>
-    <div><img src="img/DisastersAvoided.png" style="{width:100%;}"></div>
+    <img src="img/DisastersAvoided.png">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.0.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript">
-
-    var ref = new Firebase("https://disastersavertedsite.firebaseio.com/"); /*Initialize firebase*/
-
-    CakeRef.on('value', function(snapshot) {
-      if(snapshot.val() === null) {
-        alert("Averting Disaster"); /*Popup window*/
-        ref.set({disasterCount: 1}); /*Pushes data to firebase*/
-      } else {
-        var counter = snapshot.val().count;
-        alert(counter + " disaster(s) averted");
-        var updatedDisasters = counter ++;
-        ref.set({disasterCount: 'updatedDisasters'}); /*Pushes data to firebase*/
-      }
-    });
-
-
-    var submit = function () {
-        alert("Averting Disaster"); /*Popup window*/
-        ref.set({disasterCount: disasterAdded}); /*Pushes data to firebase*/
-        return false;
-    }
-
-
-    </script>
 </body>
 </html>
