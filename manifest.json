@@ -1,5 +1,5 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 2,
 
   "name": "Disasters Averted",
   "description": "This extension keeps count of the number of disasters you have averted",
