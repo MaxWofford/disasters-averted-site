@@ -2,7 +2,7 @@ var up = function() {
   document.getElementById("counter").value++;
 }
 
-function down() {
+var down = function() {
   document.getElementById("counter").value--;
 }
 
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var iddown = document.getElementById('down');
     // onClick's logic below:
     iddown.addEventListener('click', function() {
-        up();
+        down();
         console.log ("You get down cake!");
     });
 });
