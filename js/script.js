@@ -1,13 +1,14 @@
+//First check if our variable exists
 if (localStorage.AvertedCounter === 'undefined') {
   console.log ("you dun fudged up")
-  localStorage.AvertedCounter = 0;
+  localStorage.AvertedCounter = 0; //If it doesn't exist, then create it
 };
 
 
 
 var up = function() {
-  localStorage.AvertedCounter++;
-  document.getElementById("counter").value = localStorage.AvertedCounter;
+  localStorage.AvertedCounter++; //Add 1 to our counter
+  document.getElementById("counter").value = localStorage.AvertedCounter; //Update the input to our new number
 }
 
 var down = function() {
@@ -20,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // onClick's logic below:
     idup.addEventListener('click', function() {
         up();
-        console.log ("You get up cake!");
+        console.log ("You get up cake!"); //A rewarding debug message
     });
 });
 
@@ -30,21 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // onClick's logic below:
     iddown.addEventListener('click', function() {
         down();
-        console.log ("You get down cake!");
+        console.log ("You get down cake!"); //Another rewarding debug message
     });
 });
-
-function saveChanges() {
-        // Get a value saved in a form.
-        var theValue = textarea.value;
-        // Check that there's some code there.
-        if (!theValue) {
-          message('Error: No value specified');
-          return;
-        }
-        // Save it using the Chrome extension storage API.
-        chrome.storage.sync.set({'value': theValue}, function() {
-          // Notify that we saved.
-          message('Settings saved');
-        });
-      }
