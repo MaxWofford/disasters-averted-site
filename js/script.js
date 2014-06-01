@@ -1,9 +1,18 @@
+if (localStorage.AvertedCounter === 'undefined') {
+  console.log ("you dun fudged up")
+  localStorage.AvertedCounter = 0;
+};
+
+
+
 var up = function() {
-  document.getElementById("counter").value++;
+  localStorage.AvertedCounter++;
+  document.getElementById("counter").value = localStorage.AvertedCounter;
 }
 
 var down = function() {
-  document.getElementById("counter").value--;
+  localStorage.AvertedCounter--;
+  document.getElementById("counter").value = localStorage.AvertedCounter;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
