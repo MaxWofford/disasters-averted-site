@@ -14,3 +14,13 @@ body {
     font-family: "icoct", helvetica;
     float: right;
 }
+#reset {
+    border: none;
+    background: none;
+    color: red;
+    font-size: .5em;
+    font-family: "icoct", helvetica;
+    position: fixed;
+    bottom: 5px;
+    left: 0px;
+}

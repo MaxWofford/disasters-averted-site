@@ -15,12 +15,24 @@ var up = function() {
   document.getElementById("up").value = localStorage.AvertedCounter; //Update the input to our new number
 }
 
+var reset = function() {
+  localStorage.AvertedCounter = 0;
+  document.getElementById("up").value = localStorage.AvertedCounter;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     var idup = document.getElementById('up');
     // onClick's logic below:
     idup.addEventListener('click', function() {
         up();
         console.log ("You get up cake!"); //A rewarding debug message
+    });
+
+   var idreset = document.getElementById('reset');
+    // onClick's logic below:
+    idreset.addEventListener('click', function() {
+        reset();
+        console.log ("You get reset cake!"); //Another rewarding debug message
     });
 
     setupVariable();
