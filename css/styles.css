@@ -6,3 +6,11 @@ body {
     background-repeat: no-repeat;
     overflow: none;
 }
+#up {
+    border: none;
+    background: none;
+    color: red;
+    font-size: 3em;
+    font-family: "icoct", helvetica;
+    float: right;
+}
