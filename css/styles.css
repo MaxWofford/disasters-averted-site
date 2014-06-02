@@ -6,6 +6,9 @@ body {
     background-repeat: no-repeat;
     overflow: none;
 }
+input:focus {
+    outline: none;
+}
 #up {
     border: none;
     background: none;
